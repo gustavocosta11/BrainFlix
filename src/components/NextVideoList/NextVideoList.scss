@@ -1,0 +1,70 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+
+.next-video {
+  padding: 0 1rem;
+
+  &__top-divider {
+    border: 1px solid $Mercury;
+    background: $Mercury;
+  }
+  &__header {
+    color: $Silver;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.5rem 0;
+
+    @include desktop {
+      padding-bottom: 0rem;
+    }
+  }
+  &__card {
+    display: flex;
+    height: 5rem;
+    max-width: 20rem;
+    margin: 1rem 0;
+
+    &:hover {
+      transform: scale(1.05, 1.05);
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  &__image-container {
+    min-width: 7.5rem;
+    height: 5rem;
+    background: $Mercury;
+  }
+
+  &__image-container,
+  &__image {
+    border-radius: 4px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  @include desktop {
+    border-left: 2px solid $Mercury;
+    height: 100%;
+  }
+}

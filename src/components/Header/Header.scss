@@ -1,0 +1,162 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex: wrap;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 1rem;
+
+  &__logo-container {
+    width: 100%;
+  }
+
+  &__logo {
+    display: block;
+    box-sizing: content-box;
+    max-width: 7.5rem;
+    max-height: 2rem;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  &__search-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__search-input-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__search-input {
+    color: #000;
+    text-indent: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid $Mercury;
+    min-height: 36px;
+    max-width: 100%;
+    width: 85vw;
+    margin-bottom: 1rem;
+    background: url("../../assets/icons/search.svg") no-repeat;
+    background-position: 1rem;
+
+    &:active,
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid $BrainFlix-blue;
+    }
+  }
+
+  &__search-input::placeholder {
+    font-size: 0.75rem;
+    color: $BrainFlix-DarkBlack;
+  }
+
+  &__login-avatar,
+  &__login-avatar-tablet {
+    width: 36px;
+    height: 36px;
+    margin-bottom: -0.9rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+  }
+
+  &__login-avatar-tablet {
+    display: none;
+  }
+
+  &__btn-container {
+    width: 100vw;
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "AvenirNext LT Pro";
+    width: 100%;
+    background: url("../../assets/icons/upload.svg") no-repeat, $BrainFlix-blue;
+    background-position: 0.75rem, left 70%;
+    background-size: 1.25rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: $White;
+    padding: 0.5rem 0;
+    padding-top: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    &:hover {
+      background: url("../../assets/icons/upload.svg") no-repeat,
+        $BrainFlix-DarkBlue;
+      background-position: 0.75rem, left 70%;
+      background-size: 1.25rem 1.25rem;
+    }
+  }
+
+  &__btn-icon {
+    margin-right: 25%;
+  }
+
+  @include tablet {
+    padding-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__logo-container {
+      width: 30%;
+    }
+
+    &__login-avatar {
+      display: none;
+    }
+    &__login-avatar-tablet {
+      display: block;
+    }
+
+    &__search-form {
+      display: flex;
+      justify-content: right;
+      flex-direction: row;
+      width: 100%;
+      margin-right: 2rem;
+    }
+
+    &__search-input-container {
+      display: flex;
+      justify-content: right;
+      width: 50%;
+    }
+
+    &__search-input {
+      width: 30vw;
+    }
+    &__login-avatar {
+      order: 3;
+    }
+
+    &__btn-container {
+      width: 100%;
+    }
+    &__btn {
+      margin-left: 2rem;
+      width: 17vw;
+      padding-right: 1.25rem;
+      padding-left: 1.25rem;
+      height: 2.25rem;
+    }
+  }
+
+  @include desktop {
+    width: 93%;
+    &__search-input {
+      width: 55%;
+    }
+  }
+}
