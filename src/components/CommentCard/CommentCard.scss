@@ -1,0 +1,76 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+
+.comments-archieve {
+  padding: 0 1rem;
+  font-family: "AvenirNext LT Pro";
+  &__hr {
+    width: 100%;
+    border: 1px solid $Mercury;
+    margin-bottom: 16px;
+  }
+
+  &__comment {
+    display: flex;
+
+    padding: 0;
+  }
+
+  &__icon {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+  }
+
+  &__text {
+    max-width: 80vw;
+    word-wrap: break-word;
+  }
+
+  &__text,
+  &__name-date {
+    padding-left: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__com-container {
+    width: 100%;
+  }
+
+  &__name-date {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    font-weight: 700;
+  }
+
+  &__span-right {
+    color: $Silver;
+    text-align: right;
+    font-weight: 400;
+  }
+
+  @include tablet {
+    padding: 1rem 2rem;
+
+    &__hr {
+      background: $Mercury;
+    }
+  }
+
+  @include desktop {
+    padding-right: 0;
+
+    &__hr {
+      margin-right: -1.5rem;
+      background: $Mercury;
+    }
+
+    &__comment {
+      padding-right: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@import "../../styles/partials/fonts";
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
+.main-video {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: $BrainFlix-DarkBlack;
+  }
+
+  &__video-control {
+    width: 100%;
+  }
+
+  @include tablet {
+    &__container {
+      width: 100%;
+    }
+
+    &__video-control {
+      width: 87%;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      width: 100%;
+    }
+    &__video-control {
+      width: 70%;
+    }
+  }
+}
+
+.video-details {
+  padding: 1rem;
+
+  &__title {
+    color: $BrainFlix-Black;
+  }
+
+  &__divider-top,
+  &__divider-bottom {
+    border: 1px solid $Mercury;
+    background: $Mercury;
+    margin: 1rem 0;
+  }
+
+  &__divider-bottom {
+    margin-top: 0;
+  }
+
+  &__main-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__author {
+    color: $BrainFlix-Black;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__date,
+  &__userInfo {
+    color: $Silver;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  &__views {
+    margin-top: -20px;
+    margin-right: 5px;
+  }
+
+  &__likes-container {
+    margin-top: 8px;
+  }
+
+  &__views-icon {
+    margin: 0 0.626rem -0.31rem 0;
+  }
+
+  &__likes-icon {
+    margin: 0 0.626rem -0.31rem 0;
+  }
+
+  &__views-icon,
+  &__likes-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  &__description {
+    color: $BrainFlix-Black;
+    line-height: 24px;
+  }
+
+  @include tablet {
+    padding: 1rem 2rem;
+
+    &__video-control {
+      max-height: 330px;
+      background: $BrainFlix-DarkBlack;
+    }
+    &__divider-top {
+      display: none;
+    }
+
+    &__info {
+      display: flex;
+      margin-top: 1rem;
+    }
+    &__date {
+      margin: 0 0 0 1rem;
+    }
+
+    &__author-info {
+      display: flex;
+      margin-top: 1rem;
+    }
+
+    &__userInfo {
+      display: flex;
+    }
+    &__views {
+      margin-top: 0;
+    }
+    &__likes-container {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
+
+    &__divider-bottom {
+      margin-right: -2rem;
+    }
+  }
+}
+
+@include desktop {
+  .main-section {
+    display: flex;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      width: 65%;
+      margin-left: 7rem;
+      margin-top: 1.5rem;
+    }
+
+    &__right {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

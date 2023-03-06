@@ -1,0 +1,15 @@
+@import "./styles/partials/fonts";
+@import "./styles/partials/variables";
+@import "./components/Header/Header";
+@import "./components/MainVideo/MainVideo";
+@import "./styles/partials/mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AvenirNext LT Pro";
+}
