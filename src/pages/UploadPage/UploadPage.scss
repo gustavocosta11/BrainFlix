@@ -32,13 +32,10 @@
     font-size: 13px;
     padding-bottom: 4px;
   }
-  // &__img-container {
-  //   max-width: 170px;
-  // }
 
   &__img {
     width: 100%;
-    // max-height: 170px;
+
     border-radius: 4px;
   }
 
@@ -47,10 +44,6 @@
     flex-direction: column;
     width: 100%;
   }
-
-  //   &__title-label {
-  //     padding: 1rem;
-  //   }
 
   &__title-label {
     padding: 1rem 0 0.25rem 0;
