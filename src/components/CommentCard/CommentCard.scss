@@ -1,6 +1,6 @@
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/variables";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
 
 .comments-archieve {
   padding: 0 1rem;

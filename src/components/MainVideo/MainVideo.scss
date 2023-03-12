@@ -1,6 +1,6 @@
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/variables";
-@import "../../styles/partials/mixins";
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .main-video {
   width: 100%;
@@ -10,10 +10,12 @@
     justify-content: center;
     width: 100%;
     background: $BrainFlix-DarkBlack;
+    // max-height: 400px;
   }
 
   &__video-control {
     width: 100%;
+    aspect-ratio: 16 / 9;
   }
 
   @include tablet {
@@ -111,6 +113,7 @@
     &__video-control {
       max-height: 330px;
       background: $BrainFlix-DarkBlack;
+      // max-width: 90%;
     }
     &__divider-top {
       display: none;

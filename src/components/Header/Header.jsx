@@ -1,20 +1,23 @@
 import BrainFlixlogo from "../../assets/logo/BrainFlix-logo.svg";
 import Avatar from "../../assets/images/Mohan-muruge.jpg";
+import { Link } from "react-router-dom";
 
 import "./Header.scss";
+import UploadPage from "../../pages/UploadPage/UploadPage";
+import HomePage from "../../pages/HomePage/HomePage";
 
 function Header() {
   return (
     <>
       <header className="header">
         <div className="header__logo-container">
-          <a href="home">
+          <Link to="/" element={<HomePage />}>
             <img
               className="header__logo"
               src={BrainFlixlogo}
               alt={"BrainFlix"}
             />
-          </a>
+          </Link>
         </div>
 
         <form className="header__search-form">
@@ -35,7 +38,13 @@ function Header() {
             </div>
           </div>
           <div className="header_btn-container">
-            <button className="header__btn">UPLOAD</button>
+            <Link
+              to="/upload"
+              className="header__btn-link"
+              element={<UploadPage />}
+            >
+              <button className="header__btn">UPLOAD</button>
+            </Link>
           </div>
           <div>
             <img

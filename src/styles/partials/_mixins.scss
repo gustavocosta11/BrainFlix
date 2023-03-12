@@ -1,5 +1,5 @@
-@import "./fonts";
-@import "./variables";
+@use "./fonts" as *;
+@use "./variables" as *;
 
 @mixin tablet {
   @media (min-width: $tablet-breakpoint) {

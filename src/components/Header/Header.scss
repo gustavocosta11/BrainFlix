@@ -1,6 +1,6 @@
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/variables";
-@import "../../styles/partials/mixins";
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .header {
   display: flex;
@@ -8,6 +8,7 @@
   flex: wrap;
   width: 100%;
   align-items: center;
+  // justify-content: center;
   padding: 1rem 1rem;
 
   &__logo-container {
@@ -33,6 +34,7 @@
   &__search-input-container {
     display: flex;
     width: 100%;
+    border-radius: 4px;
   }
 
   &__search-input {
@@ -46,6 +48,7 @@
     margin-bottom: 1rem;
     background: url("../../assets/icons/search.svg") no-repeat;
     background-position: 1rem;
+    background-color: $Alabaster;
 
     &:active,
     &:focus,
@@ -59,6 +62,9 @@
     color: $BrainFlix-DarkBlack;
   }
 
+  // &__login-avatar-container {
+  //   width: 30%;
+  // }
   &__login-avatar,
   &__login-avatar-tablet {
     width: 36px;
@@ -74,6 +80,10 @@
 
   &__btn-container {
     width: 100vw;
+  }
+
+  &__btn-link {
+    text-decoration: none;
   }
   &__btn {
     display: flex;
@@ -91,6 +101,7 @@
     padding-top: 10px;
     font-size: 0.75rem;
     font-weight: 700;
+    cursor: pointer;
 
     &:hover {
       background: url("../../assets/icons/upload.svg") no-repeat,
@@ -151,6 +162,10 @@
       padding-left: 1.25rem;
       height: 2.25rem;
     }
+
+    // &__divider-top {
+    //   display: none;
+    // }
   }
 
   @include desktop {

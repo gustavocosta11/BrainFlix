@@ -1,6 +1,6 @@
-@import "../../styles/partials/mixins";
-@import "../../styles/partials/fonts";
-@import "../../styles/partials/variables";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
 
 .next-video {
   padding: 0 1rem;
@@ -8,16 +8,13 @@
   &__top-divider {
     border: 1px solid $Mercury;
     background: $Mercury;
+    // margin: 1rem 0;
   }
   &__header {
     color: $Silver;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     padding: 1.5rem 0;
-
-    @include desktop {
-      padding-bottom: 0rem;
-    }
   }
   &__card {
     display: flex;
@@ -47,6 +44,8 @@
     min-width: 7.5rem;
     height: 5rem;
     background: $Mercury;
+
+    // background: url(videos[1]channel);
   }
 
   &__image-container,
@@ -59,12 +58,19 @@
     height: 100%;
   }
 
+  &__link-container {
+    text-decoration: none;
+    color: $BrainFlix-Black;
+  }
+
   @include tablet {
     padding: 0 2rem;
   }
 
   @include desktop {
     border-left: 2px solid $Mercury;
-    height: 100%;
+    height: 100% &__top-divider {
+      display: none;
+    }
   }
 }

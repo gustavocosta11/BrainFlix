@@ -1,0 +1,186 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/variables" as *;
+
+.Upload {
+  &__divider,
+  &__divider-bottom,
+  &__divider-top {
+    border: 1px solid $Mercury;
+    background: $Mercury;
+    margin: 0 0 1rem 0;
+  }
+
+  &__divider-bottom,
+  &__divider-top {
+    display: none;
+  }
+  &__header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 0;
+  }
+  &__container {
+    padding: 0 1rem 1rem 1rem;
+    color: $BrainFlix-Black;
+  }
+
+  &__thumbnail-label {
+    margin-top: 2rem;
+    color: $Silver;
+    font-weight: 600;
+    font-size: 13px;
+    padding-bottom: 4px;
+  }
+  // &__img-container {
+  //   max-width: 170px;
+  // }
+
+  &__img {
+    width: 100%;
+    // max-height: 170px;
+    border-radius: 4px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  //   &__title-label {
+  //     padding: 1rem;
+  //   }
+
+  &__title-label {
+    padding: 1rem 0 0.25rem 0;
+  }
+
+  &__title-label,
+  &__description-label {
+    color: $Silver;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  &__description-label {
+    padding: 1rem 0 0.25rem 0;
+  }
+
+  &__video-title,
+  &__video-description {
+    height: 30px;
+    border: 1px solid $Mercury;
+    background: $Alabaster;
+    border-radius: 4px;
+
+    padding: 1.25rem 1.25rem 1.25rem 0.75rem;
+    &::placeholder {
+      color: $BrainFlix-DarkBlack;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "AvenirNext LT pro";
+    }
+    &:active,
+    &:focus,
+    &:focus-visible {
+      outline: 1px solid $BrainFlix-blue;
+    }
+  }
+
+  &__video-description {
+    height: 100px;
+    padding: 1rem 0 0 0.75rem;
+    resize: none;
+  }
+
+  &__publish {
+    background: url("../../assets/icons/publish.svg") no-repeat, $BrainFlix-blue;
+    background-position: 0.75rem, left 70%;
+    background-size: 1.25rem 1.25rem;
+    color: #fff;
+    &:hover {
+      background: url("../../assets/icons/publish.svg") no-repeat,
+        $BrainFlix-DarkBlue;
+      background-position: 0.75rem, left 70%;
+      background-size: 1.25rem 1.25rem;
+    }
+  }
+
+  &__publish,
+  &__cancel {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__cancel {
+    background: none;
+    color: $BrainFlix-blue;
+    &:hover {
+      background: $Mercury;
+    }
+  }
+
+  @include tablet {
+    &__container {
+      padding: 0 2rem;
+    }
+
+    &__img {
+      width: 300px;
+      display: block;
+    }
+
+    &__divider-bottom,
+    &__divider-top {
+      display: block;
+    }
+
+    &__divider-bottom {
+      margin-top: 2rem;
+    }
+    &__btn-container {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__publish-container {
+      margin: 0 0 0 1rem;
+      width: 170px;
+    }
+
+    &__cancel-container {
+      width: 170px;
+    }
+  }
+
+  @include desktop {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      width: 87%;
+    }
+    &__desktop-Container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    &__img-container {
+      max-width: 590px;
+      padding-top: 17px;
+    }
+    &__img {
+      width: 330px;
+    }
+
+    &__inputs {
+      padding-left: 1rem;
+      width: 70%;
+    }
+  }
+}
