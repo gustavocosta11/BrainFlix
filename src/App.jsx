@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import MainVideo from "./components/MainVideo/MainVideo";
 import HomePage from "./pages/HomePage/HomePage";
+import UploadComplete from "./components/UploadComplete/UploadComplete";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.scss";
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="uploadcomp" element={<UploadComplete />} />
           <Route path="/upload" element={<UploadPage />} />
           <Route path="videos/:videoId" element={<MainVideo />} />
         </Routes>

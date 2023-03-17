@@ -19,7 +19,7 @@ const NextVideoList = ({ videos, videoId }) => {
             <Link
               className="next-video__link-container"
               to={`/videos/${video.id}`}
-              key={video.id}
+              key={i}
             >
               <NextVideoCard content={video} />
             </Link>
