@@ -3,15 +3,13 @@ import Avatar from "../../assets/images/Mohan-muruge.jpg";
 import { Link } from "react-router-dom";
 
 import "./Header.scss";
-import UploadPage from "../../pages/UploadPage/UploadPage";
-import HomePage from "../../pages/HomePage/HomePage";
 
 function Header() {
   return (
     <>
       <header className="header">
         <div className="header__logo-container">
-          <Link to="/" element={<HomePage />}>
+          <Link to="/">
             <img
               className="header__logo"
               src={BrainFlixlogo}
@@ -38,11 +36,7 @@ function Header() {
             </div>
           </div>
           <div className="header_btn-container">
-            <Link
-              to="/upload"
-              className="header__btn-link"
-              element={<UploadPage />}
-            >
+            <Link to="/upload" className="header__btn-link">
               <button className="header__btn">UPLOAD</button>
             </Link>
           </div>

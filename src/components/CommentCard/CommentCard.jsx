@@ -4,14 +4,14 @@ import "./CommentCard.scss";
 function CommentCard({ comment }) {
   return (
     <>
-      <div className="comments-archieve__outer">
-        <hr className="comments-archieve__hr" />
-        <div className="comments-archieve__comment">
-          <img className="comments-archieve__icon" src={ImageDefault} alt="" />
-          <div className="comments-archieve__com-container">
-            <div className="comments-archieve__name-date">
+      <div className="comments-archive__outer">
+        <hr className="comments-archive__hr" />
+        <div className="comments-archive__comment">
+          <img className="comments-archive__icon" src={ImageDefault} alt="" />
+          <div className="comments-archive__com-container">
+            <div className="comments-archive__name-date">
               <span>{comment.name}</span>
-              <span className="comments-archieve__span-right">
+              <span className="comments-archive__span-right">
                 {new Date(comment.timestamp).toLocaleDateString("en-US", {
                   day: "2-digit",
                   month: "2-digit",
@@ -19,7 +19,7 @@ function CommentCard({ comment }) {
                 })}
               </span>
             </div>
-            <div className="comments-archieve__text">{comment.comment}</div>
+            <div className="comments-archive__text">{comment.comment}</div>
           </div>
         </div>
       </div>

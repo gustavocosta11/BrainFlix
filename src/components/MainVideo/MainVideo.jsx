@@ -13,20 +13,20 @@ import "./MainVideo.scss";
 
 // Hero vid, main vid details, parent component for AddComments, CommentCardContainer
 function MainVideo() {
-  const apiKey = "b1331a26-07a6-4e02-bba7-b46d21fc5516";
-  const [selectedIndex, setSelectedIndex] = useState();
-  const [videoDetails, setVideoDetails] = useState();
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [videoDetails, setVideoDetails] = useState(null);
 
   const { videoId } = useParams();
 
   // NextVideoList state
-  const [videos, setVideos] = useState();
+  const [videos, setVideos] = useState(null);
 
+  // console.log(videos);
   // Get first video
   useEffect(() => {
     const nextVideoListInfo = () => {
       axios
-        .get(`https://project-2-api.herokuapp.com/videos/?api_key=${apiKey}`)
+        .get(`http://localhost:9999/videos`)
         .then((res) => {
           const videoIdInfo = res.data[0].id;
           setSelectedIndex(videoIdInfo);
@@ -46,9 +46,7 @@ function MainVideo() {
 
     const videoDetailsInfo = () => {
       axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${videoDetails}?api_key=${apiKey}`
-        )
+        .get(`http://localhost:9999/videos/${videoDetails}`)
         .then((res) => {
           const vidData = res.data;
           setVideoDetails(vidData);
@@ -99,7 +97,7 @@ function MainVideo() {
                   <img
                     className="video-details__likes-icon"
                     src={heartIcon}
-                    alt="like icon"
+                    alt=""
                   />
                   {videoDetails.likes}
                 </div>
